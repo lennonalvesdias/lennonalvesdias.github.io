@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+    front:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "4200:4200"
+        networks:
+            - nginx-proxy
+        restart: always
+        environment:
+            - VIRTUAL_HOST=lennonalves.com.br,www.lennonalves.com.br
+
+networks:
+    nginx-proxy:
+        external: true
