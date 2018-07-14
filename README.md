@@ -1,6 +1,6 @@
 # LennonAlves .com.br
 
-[![LENNON](https://img.shields.io/badge/desenvolvido%20por-LENNON-red.svg)](https://lennonalves.com.br)
+[![LENNON](https://img.shields.io/badge/desenvolvido%20por-LENNON-red.svg?longCache=true&style=for-the-badge)](https://lennonalves.com.br)
 
 Neste projeto são utilizadas as seguintes tecnologias:
 
