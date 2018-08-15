@@ -1,17 +1,17 @@
 #!/bin/bash
 
 APPNAME="lennonalvescombr"
-USER="lennonalvesdias"
+SERVER="registry.lennonalves.com.br"
 TIMESTAMP=$(date "+%Y.%m.%d-%H.%M")
 
-echo "Construindo a imagem ${USER}/${APPNAME}:${TIMESTAMP}"
-docker build -t ${USER}/${APPNAME}:${TIMESTAMP} .
+echo "Construindo a imagem ${SERVER}/${APPNAME}:${TIMESTAMP}"
+docker build -t ${SERVER}/${APPNAME}:${TIMESTAMP} .
 
 echo "Marcando a tag latest também"
-docker tag ${USER}/${APPNAME}:${TIMESTAMP} ${USER}/${APPNAME}:latest
+docker tag ${SERVER}/${APPNAME}:${TIMESTAMP} ${APPNAME}:latest
 
 echo "Enviando a imagem para nuvem docker"
-docker push ${USER}/${APPNAME}:${TIMESTAMP}
-docker push ${USER}/${APPNAME}:latest
+docker push ${SERVER}/${APPNAME}:${TIMESTAMP}
+docker push ${SERVER}/${APPNAME}:latest
 
 export TIMESTAMP
