@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ng build --prod
+ng build --prod --aot=true
 
 APPNAME="lennonalvescombr"
 SERVER="registry.lennonalves.com.br"
