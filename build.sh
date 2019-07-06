@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ng build --prod
+
 APPNAME="lennonalvescombr"
 SERVER="registry.lennonalves.com.br"
 TIMESTAMP=$(date "+%Y.%m.%d-%H.%M")
