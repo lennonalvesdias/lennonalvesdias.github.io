@@ -9,7 +9,7 @@ import { FeedService } from '../../shared/services/feed-service.service';
 export class MediumComponent implements OnInit {
 
   private mediumUrl: string = 'https%3A%2F%2Fmedium.com%2Ffeed%2F%40lennonalvesdias';
-  private feeds: any;
+  public feeds: any;
 
   constructor(
     private feedService: FeedService

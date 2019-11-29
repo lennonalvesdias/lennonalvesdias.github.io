@@ -12,20 +12,24 @@ export class AngularSectionComponent implements OnInit {
   toDate: NgbDate;
   hoveredDate: NgbDate;
   closeResult: string;
-  model1 : NgbDate;
-  model2 : NgbDate;
+  model1: NgbDate;
+  model2: NgbDate;
 
-  focus;
-  focus1;
-  focus2;
-  focus3;
-  focus4;
+  model: any;
+  onDateSelection: any;
+  mama: any;
+
+  focus: any;
+  focus1: any;
+  focus2: any;
+  focus3: any;
+  focus4: any;
   constructor(private modalService: NgbModal, calendar: NgbCalendar) {
     this.fromDate = calendar.getToday();
     this.toDate = calendar.getNext(calendar.getToday(), 'd', 10);
   }
 
-  open(content, type, modalDimension) {
+  open(content: any, type: string, modalDimension: string) {
       if (modalDimension === 'sm' && type === 'modal_mini') {
           this.modalService.open(content, { windowClass: 'modal-mini', size: 'sm', centered: true }).result.then((result) => {
               this.closeResult = `Closed with: ${result}`;
@@ -39,7 +43,7 @@ export class AngularSectionComponent implements OnInit {
             this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
         });
       } else {
-          this.modalService.open(content,{ centered: true }).result.then((result) => {
+          this.modalService.open(content, { centered: true }).result.then((result) => {
               this.closeResult = `Closed with: ${result}`;
           }, (reason) => {
               this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
@@ -56,24 +60,26 @@ export class AngularSectionComponent implements OnInit {
           return  `with: ${reason}`;
       }
   }
-  isRangeStart(date: NgbDate){
+  isRangeStart(date: NgbDate) {
     return this.model1 && this.model2 && date.equals(this.model1);
   }
-  isRangeEnd(date: NgbDate){
+  isRangeEnd(date: NgbDate) {
     return this.model1 && this.model2 && date.equals(this.model2);
   }
-  isInRange(date: NgbDate){
+  isInRange(date: NgbDate) {
     return date.after(this.model1) && date.before(this.model2);
   }
-  isActive(date: NgbDate){
+  isActive(date: NgbDate) {
     return date.equals(this.model1) || date.equals(this.model2);
   }
-  endDateChanged(date){
+  endDateChanged(date: any) {
+    // tslint:disable-next-line: max-line-length
     if (this.model1 && this.model2 && (this.model1.year > this.model2.year || this.model1.year === this.model2.year && this.model1.month > this.model2.month || this.model1.year === this.model2.year && this.model1.month === this.model2.month && this.model1.day > this.model2.day )) {
       this.model1 = this.model2;
     }
   }
-  startDateChanged(date){
+  startDateChanged(date: any) {
+    // tslint:disable-next-line: max-line-length
     if (this.model1 && this.model2 && (this.model1.year > this.model2.year || this.model1.year === this.model2.year && this.model1.month > this.model2.month || this.model1.year === this.model2.year && this.model1.month === this.model2.month && this.model1.day > this.model2.day )) {
       this.model2 = this.model1;
     }
