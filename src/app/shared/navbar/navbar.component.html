@@ -2,7 +2,7 @@
   class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned">
   <div class="container">
     <a class="navbar-brand mr-lg-5" [routerLink]="['/home']">
-      <img src="./assets/img/brand/argon-white.png">
+      <img src="./assets/img/logo-white.png">
     </a>
     <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
       [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
@@ -13,7 +13,7 @@
         <div class="row">
           <div class="col-6 collapse-brand">
             <a [routerLink]="['/home']">
-              <img src="./assets/img/brand/blue.png">
+              <img src="./assets/img/logo-black.png">
             </a>
           </div>
           <div class="col-6 collapse-close">
@@ -51,7 +51,7 @@
             <span class="nav-link-inner--text">Certificados</span>
           </a>
           <div class="dropdown-menu">
-            <a *ngFor="let certificate of getCertificates()" [href]="certificate.link"
+            <a *ngFor="let certificate of getCertificates()" target="_blank" [href]="certificate.link"
               class="dropdown-item">{{ certificate.name }}</a>
           </div>
         </li>
