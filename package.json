@@ -8,7 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "ngh:build": "ng build --prod --base-href https://lennonalves.com.br/",
+    "ngh:deploy": "ngh --branch=master"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +24,7 @@
     "@angular/platform-browser-dynamic": "~8.1.0",
     "@angular/router": "~8.1.0",
     "@ng-bootstrap/ng-bootstrap": "4.1.0",
+    "angular-cli-ghpages": "^0.6.2",
     "jw-bootstrap-switch-ng2": "2.0.5",
     "moment": "^2.24.0",
     "ng2-nouislider": "1.7.13",
