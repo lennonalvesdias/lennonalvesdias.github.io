@@ -9,8 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
-    "ngh:build": "ng build --prod --base-href https://lennonalves.com.br/",
-    "ngh:deploy": "ngh --branch=master"
+    "ngh:build": "ng build --prod",
+    "ngh:deploy": "ngh --branch=master --cname=lennonalves.com.br"
   },
   "private": true,
   "dependencies": {
