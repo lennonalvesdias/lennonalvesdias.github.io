@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FeedService } from '../../shared/services/feed-service.service';
 
 @Component({
   selector: 'app-medium',
   templateUrl: './medium.component.html',
-  styleUrls: ['./medium.component.css']
+  styleUrls: ['./medium.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class MediumComponent implements OnInit {
 
