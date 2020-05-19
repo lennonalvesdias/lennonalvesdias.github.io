@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 
 import { SectionsComponent } from './sections.component';
 import { MediumComponent } from './medium/medium.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MediumComponent } from './medium/medium.component';
     NgbModule,
     RouterModule,
     NouisliderModule,
-    JwBootstrapSwitchNg2Module
+    JwBootstrapSwitchNg2Module,
+    CarouselModule
   ],
   exports: [
     SectionsComponent,

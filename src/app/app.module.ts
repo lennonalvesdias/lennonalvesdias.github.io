@@ -12,6 +12,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { SectionsModule } from './sections/sections.module';
 import { HttpModule } from '@angular/http';
 import { FeedService } from './shared/services/feed-service.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,12 +23,13 @@ import { FeedService } from './shared/services/feed-service.service';
   ],
   imports: [
     BrowserModule,
-    NgbModule.forRoot(),
+    NgbModule,
     FormsModule,
     RouterModule,
     AppRoutingModule,
     SectionsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule
   ],
   providers: [FeedService],
   bootstrap: [AppComponent]
