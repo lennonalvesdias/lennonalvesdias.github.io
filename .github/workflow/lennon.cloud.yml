@@ -7,6 +7,7 @@ on:
     - '**.md'
     branches:
     - develop
+    - feature/*
   pull_request:
     branches:
     - develop
@@ -47,5 +48,5 @@ jobs:
         username: ${{ secrets.HOST_USERNAME }}
         password: ${{ secrets.HOST_PASSWORD }}
         script: |
-          chmod +x ./lennon/restart_app.sh
-          ./lennon/restart_app.sh
+          chmod +x ./lennon/restart.sh
+          ./lennon/restart.sh
