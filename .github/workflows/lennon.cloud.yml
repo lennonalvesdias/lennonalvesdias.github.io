@@ -3,11 +3,10 @@ name: Build & Deploy
 on:
   push:
     paths-ignore:
-    - 'api/**'
     - '**.md'
     branches:
     - develop
-    - feature/*
+    - hotfix/*
   pull_request:
     branches:
     - develop
