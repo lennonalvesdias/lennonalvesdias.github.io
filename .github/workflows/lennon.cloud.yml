@@ -45,4 +45,4 @@ jobs:
           script: |
             cat ./github_token.txt | docker login docker.pkg.github.com -u lennonalvesdias --password-stdin
             docker rm -f site || true
-            docker run -d --name site -p 1994:80 --restart=always --net nginx-proxy -e VIRTUAL_HOST=site.lennon.cloud -e LETSENCRYPT_HOST=site.lennon.cloud -e LETSENCRYPT_EMAIL=lennonalvesdias@gmail.com docker.pkg.github.com/lennonalvesdias/lennonalvesdias.github.io/site
+            docker run -d --name site -p 1994:80 --restart=always --net nginx-proxy -e VIRTUAL_HOST=site.lennon.cloud,lennon.cloud -e LETSENCRYPT_HOST=site.lennon.cloud,lennon.cloud -e LETSENCRYPT_EMAIL=lennonalvesdias@gmail.com docker.pkg.github.com/lennonalvesdias/lennonalvesdias.github.io/site
