@@ -28,7 +28,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run build
-      - name: Build & Push
+      - name: docker build & push
         uses: docker/build-push-action@v1.1.0
         with:
           username: lennonalvesdias
@@ -36,7 +36,7 @@ jobs:
           repository: lennonalvesdias/lennonalvesdias.github.io/site
           registry: docker.pkg.github.com
           tags: ${{ github.sha }}, latest
-      - name: Deploy
+      - name: docker deploy
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST_ADDRESS }}
