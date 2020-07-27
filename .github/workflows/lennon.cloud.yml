@@ -33,7 +33,7 @@ jobs:
         with:
           username: lennonalvesdias
           password: ${{ secrets.GITHUB_TOKEN }}
-          repository: lennonalvesdias/site
+          repository: lennonalvesdias/lennoncloud/site
           registry: docker.pkg.github.com
           tags: ${{ github.sha }}, latest
       - name: Deploy
@@ -45,4 +45,4 @@ jobs:
           script: |
             cat ./github_token.txt | docker login docker.pkg.github.com -u lennonalvesdias --password-stdin
             docker rm -f site || true
-            docker run -d --name site -p 1994:80 --restart=always --net nginx-proxy -e VIRTUAL_HOST=site.lennon.cloud -e LETSENCRYPT_HOST=site.lennon.cloud -e LETSENCRYPT_EMAIL=lennonalvesdias@gmail.com registry.lennon.cloud/lennon/site
+            docker run -d --name site -p 1994:80 --restart=always --net nginx-proxy -e VIRTUAL_HOST=site.lennon.cloud -e LETSENCRYPT_HOST=site.lennon.cloud -e LETSENCRYPT_EMAIL=lennonalvesdias@gmail.com docker.pkg.github.com/lennonalvesdias/lennoncloud/site
