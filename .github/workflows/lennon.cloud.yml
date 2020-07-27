@@ -33,7 +33,7 @@ jobs:
         with:
           username: lennonalvesdias
           password: ${{ secrets.GITHUB_TOKEN }}
-          repository: lennonalvesdias/lennoncloud/site
+          repository: lennonalvesdias/lennonalvesdias.github.io/site
           registry: docker.pkg.github.com
           tags: ${{ github.sha }}, latest
       - name: Deploy
