@@ -31,9 +31,9 @@ jobs:
       - name: Build & Push
         uses: docker/build-push-action@v1.1.0
         with:
-          repository: lennonalvesdias/site
           username: lennonalvesdias
           password: ${{ secrets.GITHUB_TOKEN }}
+          repository: lennonalvesdias/site
           registry: docker.pkg.github.com
           tags: ${{ github.sha }}, latest
       - name: Deploy
