@@ -57,7 +57,7 @@ export class NavbarComponent implements OnInit {
     getExtraContent() {
         return [
             {
-                "link": "https://lennon.cloud/assets/portfolio.html",
+                "link": "https://site.lennon.cloud/assets/portfolio.html",
                 "icon": "ni ni-spaceship",
                 "title": "Portfólio Data Science",
                 "description": "Este portfólio tem como objetivo demonstrar conhecimentos abrangentes sobre análise e interpretação dos dados."
@@ -69,23 +69,23 @@ export class NavbarComponent implements OnInit {
         return [
             {
                 "name": "Diretor Voluntário - Associação Atlética dos Acadêmicos VII de Maio",
-                "link": "https://lennon.cloud/assets/certificates/atletica-2012.jpg"
+                "link": "https://site.lennon.cloud/assets/certificates/atletica-2012.jpg"
             },
             {
                 "name": "Participante - XII Semana de Atualização em Tecnologia da Informação (SATI)",
-                "link": "https://lennon.cloud/assets/certificates/sati-2013.jpg"
+                "link": "https://site.lennon.cloud/assets/certificates/sati-2013.jpg"
             },
             {
                 "name": "Participante - XIII Semana de Atualização em Tecnologia da Informação (SATI)",
-                "link": "https://lennon.cloud/assets/certificates/sati-2014.jpg"
+                "link": "https://site.lennon.cloud/assets/certificates/sati-2014.jpg"
             },
             {
                 "name": "Participante - Fórum E-Commerce Brasil",
-                "link": "https://lennon.cloud/assets/certificates/forum-ecommerce-2016.pdf"
+                "link": "https://site.lennon.cloud/assets/certificates/forum-ecommerce-2016.pdf"
             },
             {
                 "name": "Participante - Bootcamp - Intermediário - Big Data & Machine Learning",
-                "link": "https://lennon.cloud/assets/certificates/google-bigdata-machinelearning-2018.pdf"
+                "link": "https://site.lennon.cloud/assets/certificates/google-bigdata-machinelearning-2018.pdf"
             }
         ]
     }
