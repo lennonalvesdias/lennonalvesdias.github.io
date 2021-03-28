@@ -41,67 +41,10 @@ export class NavbarComponent implements OnInit {
     };
   }
 
-<<<<<<< HEAD
-    getExtraContent() {
-        return [
-            {
-                "link": "https://site.lennon.cloud/assets/portfolio.html",
-                "icon": "ni ni-spaceship",
-                "title": "Portfólio Data Science",
-                "description": "Este portfólio tem como objetivo demonstrar conhecimentos abrangentes sobre análise e interpretação dos dados."
-            }
-        ]
-=======
-  isHome() {
-    var titlee = this.location.prepareExternalUrl(this.location.path());
-
-    if (titlee === "#/home") {
-      return true;
-    } else {
-      return false;
->>>>>>> new style
-    }
-  }
-
-<<<<<<< HEAD
-    getCertificates() {
-        return [
-            {
-                "name": "Diretor Voluntário - Associação Atlética dos Acadêmicos VII de Maio",
-                "link": "https://site.lennon.cloud/assets/certificates/atletica-2012.jpg"
-            },
-            {
-                "name": "Participante - XII Semana de Atualização em Tecnologia da Informação (SATI)",
-                "link": "https://site.lennon.cloud/assets/certificates/sati-2013.jpg"
-            },
-            {
-                "name": "Participante - XIII Semana de Atualização em Tecnologia da Informação (SATI)",
-                "link": "https://site.lennon.cloud/assets/certificates/sati-2014.jpg"
-            },
-            {
-                "name": "Participante - Fórum E-Commerce Brasil",
-                "link": "https://site.lennon.cloud/assets/certificates/forum-ecommerce-2016.pdf"
-            },
-            {
-                "name": "Participante - Bootcamp - Intermediário - Big Data & Machine Learning",
-                "link": "https://site.lennon.cloud/assets/certificates/google-bigdata-machinelearning-2018.pdf"
-            }
-        ]
-=======
-  isDocumentation() {
-    var titlee = this.location.prepareExternalUrl(this.location.path());
-    if (titlee === "#/documentation") {
-      return true;
-    } else {
-      return false;
->>>>>>> new style
-    }
-  }
-
   getExtraContent() {
     return [
       {
-        link: "https://lennonalves.com.br/assets/portfolio.html",
+        link: "https://site.lennon.cloud/assets/portfolio.html",
         icon: "ni ni-spaceship",
         title: "Portfólio Data Science",
         description:
@@ -109,37 +52,54 @@ export class NavbarComponent implements OnInit {
       },
     ];
   }
+  isHome() {
+    var titlee = this.location.prepareExternalUrl(this.location.path());
+
+    if (titlee === "#/home") {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   getCertificates() {
     return [
       {
         name:
           "Diretor Voluntário - Associação Atlética dos Acadêmicos VII de Maio",
-        link:
-          "https://lennonalves.com.br/assets/certificates/atletica-2012.jpg",
+        link: "https://site.lennon.cloud/assets/certificates/atletica-2012.jpg",
       },
       {
         name:
           "Participante - XII Semana de Atualização em Tecnologia da Informação (SATI)",
-        link: "https://lennonalves.com.br/assets/certificates/sati-2013.jpg",
+        link: "https://site.lennon.cloud/assets/certificates/sati-2013.jpg",
       },
       {
         name:
           "Participante - XIII Semana de Atualização em Tecnologia da Informação (SATI)",
-        link: "https://lennonalves.com.br/assets/certificates/sati-2014.jpg",
+        link: "https://site.lennon.cloud/assets/certificates/sati-2014.jpg",
       },
       {
         name: "Participante - Fórum E-Commerce Brasil",
         link:
-          "https://lennonalves.com.br/assets/certificates/forum-ecommerce-2016.pdf",
+          "https://site.lennon.cloud/assets/certificates/forum-ecommerce-2016.pdf",
       },
       {
         name:
           "Participante - Bootcamp - Intermediário - Big Data & Machine Learning",
         link:
-          "https://lennonalves.com.br/assets/certificates/google-bigdata-machinelearning-2018.pdf",
+          "https://site.lennon.cloud/assets/certificates/google-bigdata-machinelearning-2018.pdf",
       },
     ];
+  }
+
+  isDocumentation() {
+    var titlee = this.location.prepareExternalUrl(this.location.path());
+    if (titlee === "#/documentation") {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   get socialNetworks() {
