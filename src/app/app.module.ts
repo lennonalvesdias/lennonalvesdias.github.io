@@ -13,13 +13,23 @@ import { SectionsModule } from './sections/sections.module';
 import { HttpModule } from '@angular/http';
 import { FeedService } from './shared/services/feed-service.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProfileResumeComponent } from './profile/resume/resume.component';
+import { ProfileMeComponent } from './profile/me/me.component';
+import { ProfileTestimonialsComponent } from './profile/testimonials/testimonials.component';
+import { ProfileProjectsComponent } from './profile/projects/projects.component';
+import { ProfileBlogComponent } from './profile/blog/blog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ProfileResumeComponent,
+    ProfileMeComponent,
+    ProfileTestimonialsComponent,
+    ProfileProjectsComponent,
+    ProfileBlogComponent
   ],
   imports: [
     BrowserModule,
