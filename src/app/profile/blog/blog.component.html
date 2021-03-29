@@ -7,28 +7,25 @@
           <img class="card-img-top" [src]="feed.thumbnail" alt="image" />
           <div class="card-body">
             <h5 class="card-title">
-              <a class="theme-link" href="blog-post.html">{{ feed.title }}</a>
+              <a class="theme-link" href="">{{ feed.title }}</a>
             </h5>
             <p class="card-text">{{ feed.description.substring(0, 300) }}...</p>
             <p class="mb-0">
-              <a class="more-link" href="blog-post.html"
-                >Continuar lendo &rarr;</a
-              >
+              <a class="more-link" href="">Continuar lendo &rarr;</a>
             </p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">{{ feed.pubDate }}</small>
+            <small class="text-muted">{{
+              feed.pubDate | date: "dd/MM/yyyy"
+            }}</small>
           </div>
         </div>
-        <!--//card-->
       </div>
     </div>
-    <!--//row-->
     <div class="text-center py-3">
-      <a href="https://medium.com/@lennonalvesdias" target="_blank" class="btn btn-primary"
+      <a routerLink="/blog" class="btn btn-primary"
         ><i class="fas fa-arrow-alt-circle-right mr-2"></i>Ver Blog</a
       >
     </div>
   </div>
-  <!--//container-->
 </section>

@@ -1,23 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { RouterModule } from '@angular/router';
-import { AppRoutingModule } from './app.routing';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { RouterModule } from "@angular/router";
+import { AppRoutingModule } from "./app.routing";
 
-import { AppComponent } from './app.component';
-import { ProfileComponent } from './profile/profile.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { SectionsModule } from './sections/sections.module';
-import { HttpModule } from '@angular/http';
-import { FeedService } from './shared/services/feed-service.service';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProfileResumeComponent } from './profile/resume/resume.component';
-import { ProfileMeComponent } from './profile/me/me.component';
-import { ProfileTestimonialsComponent } from './profile/testimonials/testimonials.component';
-import { ProfileProjectsComponent } from './profile/projects/projects.component';
-import { ProfileBlogComponent } from './profile/blog/blog.component';
+import { AppComponent } from "./app.component";
+import { ProfileComponent } from "./profile/profile.component";
+import { NavbarComponent } from "./shared/navbar/navbar.component";
+import { FooterComponent } from "./shared/footer/footer.component";
+import { SectionsModule } from "./sections/sections.module";
+import { HttpModule } from "@angular/http";
+import { FeedService } from "./shared/services/feed-service.service";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ProfileResumeComponent } from "./profile/resume/resume.component";
+import { ProfileMeComponent } from "./profile/me/me.component";
+import { ProfileTestimonialsComponent } from "./profile/testimonials/testimonials.component";
+import { ProfileProjectsComponent } from "./profile/projects/projects.component";
+import { ProfileBlogComponent } from "./profile/blog/blog.component";
+import { BlogComponent } from "./blog/blog.component";
+import { BlogPostComponent } from "./blog/post/post.component";
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ProfileBlogComponent } from './profile/blog/blog.component';
     ProfileMeComponent,
     ProfileTestimonialsComponent,
     ProfileProjectsComponent,
-    ProfileBlogComponent
+    ProfileBlogComponent,
+    BlogComponent,
+    BlogPostComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,9 +43,9 @@ import { ProfileBlogComponent } from './profile/blog/blog.component';
     AppRoutingModule,
     SectionsModule,
     HttpModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [FeedService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

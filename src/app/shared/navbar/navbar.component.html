@@ -54,7 +54,7 @@
         <!--//profile-section-->
 
         <ul class="navbar-nav flex-column text-left">
-          <li *ngFor="let item of menu" class="nav-item active">
+          <li *ngFor="let item of menu" class="nav-item">
             <a class="nav-link" [routerLink]="item.link"
               ><i [class]="item.icon"></i>{{ item.title
               }}<span class="sr-only">(current)</span></a

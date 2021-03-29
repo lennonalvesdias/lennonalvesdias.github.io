@@ -1,0 +1,33 @@
+<div class="main-wrapper">
+  <article class="blog-post px-3 py-5 p-md-5">
+    <div class="container single-col-max-width">
+      <header class="blog-post-header">
+        <h2 class="title mb-2">{{ feeds[id].title }}</h2>
+        <div class="meta mb-3">
+          <span class="date">{{ feeds[id].pubDate | date: "dd/MM/yyyy hh:mm:ss" }}</span>
+          <!-- <span class="time">5 min read</span> -->
+          <!-- <span class="comment"><a href="#">4 comments</a></span> -->
+        </div>
+      </header>
+
+      <div class="blog-post-body">
+        <figure class="blog-banner">
+          <a>
+            <img class="img-fluid" [src]="feeds[id].thumbnail" alt="image" />
+          </a>
+        </figure>
+        <p [innerHTML]="feeds[id].content"></p>
+      </div>
+
+      <nav class="blog-nav nav nav-justified my-5">
+        <a
+          class="nav-link-next nav-item nav-link rounded-right"
+          routerLink="/blog"
+          >Outras postagens</a
+        >
+      </nav>
+    </div>
+  </article>
+
+  <app-footer></app-footer>
+</div>
