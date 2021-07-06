@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit {
     return [
       {
         title: "Sobre Mim",
-        link: "/user-profile",
+        link: "/profile",
         icon: "fas fa-user fa-fw mr-2",
       },
       // {
@@ -28,6 +28,11 @@ export class NavbarComponent implements OnInit {
       //   link: "/resume",
       //   icon: "fas fa-file-alt fa-fw mr-2",
       // },
+      {
+        title: "Blog",
+        link: "/blog",
+        icon: "fas fa-blog fa-fw mr-2",
+      },
     ];
   }
 
@@ -104,29 +109,23 @@ export class NavbarComponent implements OnInit {
 
   get socialNetworks() {
     return [
-      {
-        link: "https://www.facebook.com/lennonalvesdias",
-        title: "Like us on Facebook",
-        icon: "fab fa-facebook-square fa-fw",
-        name: "Facebook",
-      },
-      {
-        link: "https://www.instagram.com/lennonalvesdias",
-        title: "Follow us on Instagram",
-        icon: "fab fa-instagram fa-fw",
-        name: "Instagram",
-      },
+      // {
+      //   link: "https://www.facebook.com/lennonalvesdias",
+      //   title: "Like us on Facebook",
+      //   icon: "fab fa-facebook-square fa-fw",
+      //   name: "Facebook",
+      // },
+      // {
+      //   link: "https://www.instagram.com/lennonalvesdias",
+      //   title: "Follow us on Instagram",
+      //   icon: "fab fa-instagram fa-fw",
+      //   name: "Instagram",
+      // },
       {
         link: "https://twitter.com/lennonalvesdias",
         title: "Follow us on Twitter",
         icon: "fab fa-twitter fa-fw",
         name: "Twitter",
-      },
-      {
-        link: "https://github.com/lennonalvesdias",
-        title: "Star us on Github",
-        icon: "fab fa-github fa-fw",
-        name: "Github",
       },
       {
         link: "https://www.linkedin.com/in/lennonalvesdias/",
@@ -135,9 +134,27 @@ export class NavbarComponent implements OnInit {
         name: "LinkedIn",
       },
       {
+        link: "https://github.com/lennonalvesdias",
+        title: "Star us on Github",
+        icon: "fab fa-github fa-fw",
+        name: "Github",
+      },
+      {
+        link: "https://stackoverflow.com/users/13500918/lennon-alves-dias",
+        title: "Follow us on Stack Overflow",
+        icon: "fab fa-stack-overflow fa-fw",
+        name: "Stack Overflow",
+      },
+      {
+        link: "https://medium.com/@lennonalvesdias",
+        title: "Read us on Medium",
+        icon: "fab fa-medium fa-fw",
+        name: "Medium",
+      },
+      {
         link: "http://lattes.cnpq.br/6379239457237236",
         title: "Read us on Lattes",
-        icon: "fab fa-file-text-o fa-fw",
+        icon: "fas fa-file-alt fa-fw",
         name: "Lattes",
       },
     ];

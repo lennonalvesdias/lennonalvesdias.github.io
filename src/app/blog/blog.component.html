@@ -1,0 +1,35 @@
+<div class="main-wrapper">
+  <section class="blog-list px-3 py-5 p-md-5">
+    <div class="container">
+      <div class="row">
+        <div *ngFor="let feed of feeds; let idx = index" class="col-md-4 mb-3">
+          <div class="card blog-post-card">
+            <img class="card-img-top" [src]="feed.thumbnail" alt="image" />
+            <div class="card-body">
+              <h5 class="card-title">
+                <a class="theme-link" [routerLink]="['/blog', idx]">{{
+                  feed.title
+                }}</a>
+              </h5>
+              <p class="card-text">
+                {{ feed.description.substring(0, 300) }}...
+              </p>
+              <p class="mb-0">
+                <a class="more-link" [routerLink]="['/blog', idx]"
+                  >Continuar lendo &rarr;</a
+                >
+              </p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">{{
+                feed.pubDate | date: "dd/MM/yyyy"
+              }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <app-footer></app-footer>
+</div>
